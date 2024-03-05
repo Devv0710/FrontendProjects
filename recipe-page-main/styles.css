@@ -1,0 +1,131 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* VARIABLES */
+:root {
+  --color-primario-1: hsl(14, 45%, 36%);
+  --color-primario-2: hsl(332, 51%, 32%);
+
+  --color-neutral-1: hsl(0, 0%, 100%);
+  --color-neutral-2: hsl(330, 100%, 98%);
+  --color-neutral-3: hsl(30, 54%, 90%);
+  --color-neutral-4: hsl(30, 18%, 87%);
+  --color-neutral-5: hsl(30, 10%, 34%);
+  --color-neutral-6: hsl(24, 5%, 18%);
+
+  --font-size: 16px;
+}
+/* ESTILOS GENERALES */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size);
+  
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* CLASES DE UTILIDAD */
+.young-serif-regular {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.outfit-regular {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+.bold {
+  font-weight: bold;
+}
+ul,
+ol {
+  padding-left: 1rem;
+}
+li{
+    padding-bottom: .5rem;
+}
+.color-brown{
+  color: var(--color-primario-1)
+}
+
+.divider{
+  padding-bottom: 1rem;
+  border-bottom: 1px solid hsl(0, 0%, 24%);
+}
+/* CLASES */
+.contenedor {
+  margin: 0 auto;
+  background-color: var(--color-neutral-1);
+}
+
+@media (min-width: 641px) {
+  .contenedor {
+    max-width: 600px;
+    border-radius: 1.5rem;
+  }
+  body{
+    padding: 2rem 0;
+    background-color: var(--color-neutral-3);
+  }
+  .contenedor__imagen{
+    padding: 1rem 3.5rem;
+  }
+  
+  img{
+    max-width: 100%;
+    border-radius: 1rem;
+    display: block;
+    margin: 0 auto;
+  }
+  .main-container {
+    padding-top: 2rem;
+  }
+}
+
+.main-container {
+  padding: 3rem 3.5rem;
+}
+
+.receta-titulo {
+
+  font-size: 3rem;
+}
+
+.container-preparation {
+  background-color: var(--color-neutral-2);
+  padding: 1.5rem 1rem;
+}
+.preparation-titulo {
+  font-size: 1.5rem;
+  color: var(--color-primario-2);
+}
+
+h3 {
+  font-size: 2rem;
+  color: var(--color-primario-1);
+}
+/* Styles for the table */
+table {
+  width: 100%; /* Adjust width as needed */
+  border-collapse: collapse; 
+}
+
+/* Styles for table body (tbody) */
+td {
+  padding: 5px 10px; /* Add padding */
+  border-bottom: 1px solid #ddd; /* Add border to each row */
+}
